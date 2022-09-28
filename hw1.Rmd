@@ -1,0 +1,76 @@
+---
+title: "hw1.Rmd"
+author: "Amina"
+date: Sys.time()
+output: 
+  html_document:
+    theme: readable
+    highlight: espresso
+    css: style.css
+    font-family: Palatino;
+    font-size: 16; 
+        
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+A section called "Introduction" where you provide a short summary of the structure of your homework. Moreover, record a short video to introduce your group and include it in your RMarkdown document.
+
+## Group Member
+
+A section called "Group Members". This section should have one subsection for each group member in your team. For example, a group with three members should have three subsections. Each of these subsections (named after each group member) should include small biographies containing at least the following elements:
+
+1. An avatar picture. Make sure to include a caption for this image. Make sure all pictures have the same size.
+
+2. A paragraph describing your favorite hobby as well as one interesting fact about yourself (preferably true).
+Your favorite quote in blockquote format. Make sure to reference your quote using BibTex.
+
+3. A table having two columns (first column containing the classes you are following this semester; second column containing the time of these classes).
+
+4.Add at least one emoji and one Giphy per group member.
+
+```{r pressure, echo=FALSE}
+#Amina
+
+```
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Table Example</title>
+</head>
+<body>
+<table>
+  <tr> 
+    <td>Column 1</td>
+    <td>Column 2</td>
+  </tr>
+  <tr> 
+    <td>Column 1</td>
+    <td>Column 2</td>
+</tr>
+</table>
+</body>
+</html>
+```{r pressure, echo=FALSE}
+#Edwar
+```
+
+```{r pressure, echo=FALSE}
+#Jillo
+```
+
+
+## RMarkdown Syntax
+
+In this section make sure to:
+Chunk option can be really usefull however it can lead to some missleading. Indeed
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
