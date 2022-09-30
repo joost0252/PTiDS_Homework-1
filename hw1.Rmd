@@ -12,7 +12,7 @@ output:
 ---
 
 ```{r, echo = FALSE, include = FALSE, message = FALSE}
-source(here::here("scripts/setup.R"))
+source(here::here("Setup.R"))
 ```
 
 ```{r setup, include=FALSE}
@@ -25,7 +25,7 @@ A section called "Introduction" where you provide a short summary of the structu
 
 Moreover, record a short video to introduce your group and include it in your RMarkdown document.
 
-<video width="320" height="240" controls>
+<video width="640" height="480" controls>
   <source src="nameofthevideo.mp4" type="video/mp4">
 </video>
 
@@ -45,42 +45,51 @@ Your favorite quote in blockquote format. Make sure to reference your quote usin
 
 4.Add at least one emoji and one Giphy per group member.
 
-#Amina 
+**Amina** 
 
-<img src="Amina.png" alt="equation 2" style="width:300px;height:50px;">
-Hello ! Blablabla
+<img src="AvatarAmina.JPEG" alt="Amina" style="width:150px;height:200px;"> 
+<br>
 
-My fav quote:
+<p> Hello ! I'm Amina Mohammed, I'm following my last semester of course before writing my thesis. I'm super excited to follow this class and i expect to learn a bunch of new tools in order to develop new skills. &#128516;</p> 
+<br>
+<p> Apart from my student life, I love to express my creativity through poterry. I love the process of creating a  beautiful, sculptural and functional pieces with my own hands. I will give an extra point to this activity for the feeling of accomplishment; it feels incredible. &#128525;&#128151;<p>
+
+</p> If i had to choose emoji to describe myself I would certainly be: &#9749;&#128218; &#128049; &#127857; &#127856; &#127871;</p>
+
+<br>
+
+My fav quote would be :
 
 <figure>
-    <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <blockquote
         <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
     </blockquote>
     <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
 </figure>
 
 
-<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" />
+<br>
+<br>
 
-
-
-```{r echo=FALSE}
+You can find in the table bellow the list of all my classes this semester
+```{r echo = FALSE, include = FALSE, message = FALSE}
 
 ScheduleAmina <- data.frame(Classes=c("Supply Chain", "Programming tools in DS", "IMC","Project in DA","Production Control","Risk Analytics"),
-                  Schedule=c("Monday at 8h30 - 12h00", "Tuesday at 9h00 - 12h00", "Tuesday at 14h15 - 18h00", "Thurday at 8h30 - 12h00", "Thurday at 14h00 - 18h00 (7 first week)", "Thurday at 14h00 - 18h00 (7 last week)"))
+                  Schedule=c("Monday from 8h30 - 12h00", "Tuesday from 9h00 - 12h00", "Tuesday from 14h15 - 18h00", "Thurday from 8h30 - 12h00", "Thurday from 14h00 - 18h00 (7 first week)", "Thurday from 14h00 - 18h00 (7 last week)"))
 
 ```
 
 ```{r echo=FALSE}
 kable(head(ScheduleAmina), booktabs = TRUE) %>%
-  kable_styling(font_size = 8)
+  kable_styling(font_size = 16)
 ```
 
-kable(head(ScheduleAmina), booktabs = TRUE) %>%
-  kable_styling(font_size = 8)
-  
+I don't have class on Wednesday and Friday, But i have some hectic days starting from 8am to 6pm.  
+
+<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="150" />
+
 <br>
-<br>
+
 ```{r echo=FALSE}
 #Ed
 
