@@ -1,16 +1,19 @@
 ---
 title: "hw1.Rmd"
-author: "Amina"
-date: Sys.time()
+author: "Amina Mohammed (17301920), "
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   html_document:
     theme: readable
     highlight: espresso
     css: style.css
-    font-family: Palatino; 
-    font-size: 16;
-        
+    font-family: Palatino 
+    font-size: 16
 ---
+
+```{r, echo = FALSE, include = FALSE, message = FALSE}
+source(here::here("scripts/setup.R"))
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -18,7 +21,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-A section called "Introduction" where you provide a short summary of the structure of your homework. Moreover, record a short video to introduce your group and include it in your RMarkdown document.
+A section called "Introduction" where you provide a short summary of the structure of your homework. 
+
+Moreover, record a short video to introduce your group and include it in your RMarkdown document.
+
+<video width="320" height="240" controls>
+  <source src="nameofthevideo.mp4" type="video/mp4">
+</video>
+
+
+<br>
 
 ## Group Member
 
@@ -33,34 +45,48 @@ Your favorite quote in blockquote format. Make sure to reference your quote usin
 
 4.Add at least one emoji and one Giphy per group member.
 
-```{r pressure, echo=FALSE}
-#Amina
+#Amina 
+
+<img src="Amina.png" alt="equation 2" style="width:300px;height:50px;">
+Hello ! Blablabla
+
+My fav quote:
+
+<figure>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+    </blockquote>
+    <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+</figure>
+
+
+<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" />
+
+
+
+```{r echo=FALSE}
+
+ScheduleAmina <- data.frame(Classes=c("Supply Chain", "Programming tools in DS", "IMC","Project in DA","Production Control","Risk Analytics"),
+                  Schedule=c("Monday at 8h30 - 12h00", "Tuesday at 9h00 - 12h00", "Tuesday at 14h15 - 18h00", "Thurday at 8h30 - 12h00", "Thurday at 14h00 - 18h00 (7 first week)", "Thurday at 14h00 - 18h00 (7 last week)"))
 
 ```
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>HTML Table Example</title>
-</head>
-<body>
-<table>
-  <tr> 
-    <td>Column 1</td>
-    <td>Column 2</td>
-  </tr>
-  <tr> 
-    <td>Column 1</td>
-    <td>Column 2</td>
-</tr>
-</table>
-</body>
-</html>
-```{r pressure, echo=FALSE}
+```{r echo=FALSE}
+kable(head(ScheduleAmina), booktabs = TRUE) %>%
+  kable_styling(font_size = 8)
+```
+
+kable(head(ScheduleAmina), booktabs = TRUE) %>%
+  kable_styling(font_size = 8)
+  
+<br>
+<br>
+```{r echo=FALSE}
 #Ed
+
 ```
 
-```{r pressure, echo=FALSE}
+```{r echo=FALSE}
 #J
 ```
 
@@ -70,7 +96,7 @@ Your favorite quote in blockquote format. Make sure to reference your quote usin
 In this section make sure to:
 Chunk option can be really usefull however it can lead to some missleading. Indeed
 
-```{r pressure, echo=FALSE}
+```{r echo=FALSE}
 
 ```
 
