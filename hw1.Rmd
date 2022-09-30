@@ -19,7 +19,7 @@ source(here::here("Setup.R"))
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Introduction
+# Introduction
 
 A section called "Introduction" where you provide a short summary of the structure of your homework. 
 
@@ -32,7 +32,7 @@ Moreover, record a short video to introduce your group and include it in your RM
 
 <br>
 
-## Group Member
+# Group Member
 
 A section called "Group Members". This section should have one subsection for each group member in your team. For example, a group with three members should have three subsections. Each of these subsections (named after each group member) should include small biographies containing at least the following elements:
 
@@ -100,12 +100,99 @@ I don't have class on Wednesday and Friday, But i have some hectic days starting
 ```
 
 
-## RMarkdown Syntax
+# RMarkdown Syntax
 
-In this section make sure to:
+**1.Show an example where the chunk option `cache = T` leads to a misleading answer.**
+
 Chunk option can be really usefull however it can lead to some missleading. Indeed
 
 ```{r echo=FALSE}
 
 ```
+<br>
 
+**2. Simulate 1000 random samples from an exponential distribution with mean $\lambda = 1$ using the function `rexp()`. Store these 1000 values in a vector called `x`. Then, compute the empirical median, mean and variance of `x`. Are these results different from $log(2)/\lambda$, $1/\lambda$ and $1/\lambda^2$ (their respective theoretical values)? Is this result surprising? Justify your answer.**
+
+<br>
+
+**3. Repeat the same experiment with $\lambda = 5$, display the code in the HTML file and discuss the results.**
+
+```{r echo=FALSE}
+
+```
+
+<br>
+
+**4. Include a graph showing the histogram of `x` (make sure to include a caption to this figure). What happens if you increase the number of bins to 200?**
+
+<br>
+
+**5. Include the following equation: ![eq](hw1_eq2.png)**
+
+<img src="hw1_eq2.png" alt="equation 2"> 
+
+<br>
+
+**6. Include the following in-line equation: <img src="hw1_eq1.png" alt="eq2" style="display: inline-block; margin: 0" width="300px" />**
+
+<br>
+
+**7. Include the following text in purple: "It is change, continuing change, inevitable change, that is the dominant factor in society today. No sensible decision can be made any longer without....", Isaac Asimov.**
+
+<span style="color: purple;">"It is change, continuing change, inevitable change, that is the dominant factor in society today. No sensible decision can be made any longer without....", Isaac Asimov. </span>
+
+<br>
+
+**8. Include a "Click here" button with hide/unhide functionality.**
+```{r,  echo=FALSE}
+hide <- function(button_text = "Solution") {
+  paste0("\n<div class='webex-solution'><button>", button_text, "</button>\n")
+}
+
+unhide <- function() {
+  paste0("\n</div>\n")
+}
+
+style_widgets <- function(default = "red", correct = "blue") {
+  paste0(
+    "\n<style>\n",
+    "    .webex-solveme { border-color: ", default,"; }\n",
+    "    .webex-solveme.webex-correct { border-color: ", correct,"; }\n",
+    "</style>\n\n"
+  )
+}
+```
+
+
+`r hide("Click here")`
+`r unhide()`
+
+<br>
+
+**9. Include a "color box"" with some text.**
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Title</title>
+    <style>
+      /* The . with the boxed represents that it is a class */
+      .boxed {
+        background: purple;
+        color: black;
+        border: 3px solid black;
+        margin: 0px auto;
+        width: 456px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxed">
+        Hello ! We're the group f
+  </body>
+</html>
+
+<br>
