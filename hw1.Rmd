@@ -92,7 +92,13 @@ I don't have class on Wednesday and Friday, But i have some hectic days starting
 
 **1.Show an example where the chunk option `cache = T` leads to a misleading answer.**
 
-Chunk option can be really usefull however it can lead to some missleading. Indeed
+Caching option can be really usefull however it can lead to sometimes missleading. Indeed, If a code time consuming due to long computations or plots that are long to generate you can use knitr caching to improve performance. However, if codes are linked between eachother, when we modify we have to observe that the code with chunk cache option are also update, otherwise, the code will always take into consideration the old cache that we "register".
+
+```{r echo=FALSE, cache=TRUE}
+
+```
+
+
 
 ```{r echo=FALSE}
 
@@ -100,6 +106,36 @@ Chunk option can be really usefull however it can lead to some missleading. Inde
 <br>
 
 **2. Simulate 1000 random samples from an exponential distribution with mean $\lambda = 1$ using the function `rexp()`. Store these 1000 values in a vector called `x`. Then, compute the empirical median, mean and variance of `x`. Are these results different from $log(2)/\lambda$, $1/\lambda$ and $1/\lambda^2$ (their respective theoretical values)? Is this result surprising? Justify your answer.**
+
+```{r,  echo=FALSE}
+set.seed(2000)
+x <- rexp(1000, 1)
+
+#for x
+median(x)
+mean(x)
+var(x)
+
+```
+
+Are these results different from $log(2)/\lambda$, $1/\lambda$ and $1/\lambda^2$ (their respective theoretical values)? Is this result surprising? Justify your answer.
+```{r,  echo=FALSE}
+#for log(2)/x
+median(log(2)/x)
+mean(log(2)/x)
+var(log(2)/x)
+
+#for 1/x
+median(1/x)
+mean(1/x)
+var(1/x)
+
+#for 1/x^2
+median(1/x^2)
+mean(1/x^2)
+var(1/x^2)
+
+```
 
 <br>
 

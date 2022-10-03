@@ -684,8 +684,13 @@ days starting from 8am to 6pm.</p>
 <h1>RMarkdown Syntax</h1>
 <p><strong>1.Show an example where the chunk option
 <code>cache = T</code> leads to a misleading answer.</strong></p>
-<p>Chunk option can be really usefull however it can lead to some
-missleading. Indeed</p>
+<p>Caching option can be really usefull however it can lead to sometimes
+missleading. Indeed, If a code time consuming due to long computations
+or plots that are long to generate you can use knitr caching to improve
+performance. However, if codes are linked between eachother, when we
+modify we have to observe that the code with chunk cache option are also
+update, otherwise, the code will always take into consideration the old
+cache that we “register”.</p>
 <p><br></p>
 <p><strong>2. Simulate 1000 random samples from an exponential
 distribution with mean <span class="math inline">\(\lambda = 1\)</span>
@@ -693,6 +698,20 @@ using the function <code>rexp()</code>. Store these 1000 values in a
 vector called <code>x</code>. Then, compute the empirical median, mean
 and variance of <code>x</code>. Are these results different from <span class="math inline">\(log(2)/\lambda\)</span>, <span class="math inline">\(1/\lambda\)</span> and <span class="math inline">\(1/\lambda^2\)</span> (their respective theoretical
 values)? Is this result surprising? Justify your answer.</strong></p>
+<pre><code>#&gt; [1] 0.624
+#&gt; [1] 0.974
+#&gt; [1] 0.994</code></pre>
+<p>Are these results different from <span class="math inline">\(log(2)/\lambda\)</span>, <span class="math inline">\(1/\lambda\)</span> and <span class="math inline">\(1/\lambda^2\)</span> (their respective theoretical
+values)? Is this result surprising? Justify your answer.</p>
+<pre><code>#&gt; [1] 1.11
+#&gt; [1] 5.95
+#&gt; [1] 4074
+#&gt; [1] 1.6
+#&gt; [1] 8.58
+#&gt; [1] 8479
+#&gt; [1] 2.57
+#&gt; [1] 8545
+#&gt; [1] 6.52e+10</code></pre>
 <p><br></p>
 <p><strong>3. Repeat the same experiment with <span class="math inline">\(\lambda = 5\)</span>, display the code in the HTML
 file and discuss the results.</strong></p>
