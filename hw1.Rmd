@@ -34,21 +34,9 @@ Moreover, record a short video to introduce your group and include it in your RM
 
 # Group Member
 
-A section called "Group Members". This section should have one subsection for each group member in your team. For example, a group with three members should have three subsections. Each of these subsections (named after each group member) should include small biographies containing at least the following elements:
-
-1. An avatar picture. Make sure to include a caption for this image. Make sure all pictures have the same size.
-
-2. A paragraph describing your favorite hobby as well as one interesting fact about yourself (preferably true).
-Your favorite quote in blockquote format. Make sure to reference your quote using BibTex.
-
-3. A table having two columns (first column containing the classes you are following this semester; second column containing the time of these classes).
-
-4.Add at least one emoji and one Giphy per group member.
-
 **Amina** 
 
-<img src="AvatarAmina.JPEG" alt="Amina" style="width:150px;height:200px;"> 
-<br>
+<img src="AvatarAmina.JPEG" align="left" alt="Amina" style="width:150px;height:200px;"> 
 
 <p> Hello ! I'm Amina Mohammed, I'm following my last semester of course before writing my thesis. I'm super excited to follow this class and i expect to learn a bunch of new tools in order to develop new skills. &#128516;</p> 
 <br>
