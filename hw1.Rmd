@@ -1,6 +1,6 @@
 ---
 title: "hw1.Rmd"
-author: "Amina Mohammed (17301920), "
+author: "Amina Mohammed (17301920),Edward Tandia (17310806) "
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   html_document:
@@ -24,6 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 A section called "Introduction" where you provide a short summary of the structure of your homework. 
 
 Moreover, record a short video to introduce your group and include it in your RMarkdown document.
+
 
 <video width="640" height="480" controls>
   <source src="nameofthevideo.mp4" type="video/mp4">
@@ -64,6 +65,7 @@ You can find in the table bellow the list of all my classes this semester
 
 ScheduleAmina <- data.frame(Classes=c("Supply Chain", "Programming tools in DS", "IMC","Project in DA","Production Control","Risk Analytics"),
                   Schedule=c("Monday from 8h30 - 12h00", "Tuesday from 9h00 - 12h00", "Tuesday from 14h15 - 18h00", "Thurday from 8h30 - 12h00", "Thurday from 14h00 - 18h00 (7 first week)", "Thurday from 14h00 - 18h00 (7 last week)"))
+print(ScheduleAmina) 
 
 ```
 
@@ -78,15 +80,37 @@ I don't have class on Wednesday and Friday, But i have some hectic days starting
 
 <br>
 
+** Edward Tandia **
+
+<img src="photo_ed.JPEG" align="left" alt="Edward" style="width:150px;height:200px;"> 
+
+<p> Hey there! I am Edward Tandia, currently pursuing a master degree in Business analytics. As my friend Amina, this is also my last "normal" semester before starting the master thesis. I'm looking forward to learning new skills and improve myself in programming with R. I am 100% motivated and I truly believe that this semester will be memorable. &#128516;</p> 
+<br>
+<p> My Hobbies?? Well, I am quite an open mind actually. I love to discover new topics, do sport,improve myself regardless the subject. Basically, I always seek self-improvement. &#128525;&#128151;<p>
+
+My favortie quote is :
+
+<figure>
+    <blockquote
+        <p>Each problem has its own solution.</p>
+    </blockquote>
+    <figcaption>— my mum</cite></figcaption>
+</figure>
+</p> If i had to choose one emoji to represent myself, it would be this one: &#9749;&#128218; &#128049; &#127857; &#127856; &#127871;</p>
+
+
 ```{r echo=FALSE}
 #Ed
+schedule_ed <- data.frame(Classes=c("Supply Chain", "Programming tools in DS", "Text mining","Individual Behavior in Digital Environments","Project in DA"),
+                  Schedule=c("Monday from 8h30 - 12h00", "Tuesday from 9h00 - 12h00","Wednesday from 8h30 - 12h00",
+                             "Wednesday from 14h15 - 18h00","Thurday from 8h30 - 12h00"))
+print(schedule_ed) 
 
 ```
 
 ```{r echo=FALSE}
 #J
 ```
-
 
 # RMarkdown Syntax
 
@@ -142,7 +166,9 @@ var(1/x^2)
 **3. Repeat the same experiment with $\lambda = 5$, display the code in the HTML file and discuss the results.**
 
 ```{r echo=FALSE}
-
+set.seed(2000)
+y <- rexp(1000, 5)
+hist(y,xlab='Values',main = 'Exp distribution with lambda = 5')
 ```
 
 <br>
@@ -169,7 +195,7 @@ var(1/x^2)
 
 **8. Include a "Click here" button with hide/unhide functionality.**
 ```{r,  echo=FALSE}
-hide <- function(button_text = "Solution") {
+hide <- function(button_text = "Solution") { #Click here instead ?
   paste0("\n<div class='webex-solution'><button>", button_text, "</button>\n")
 }
 
