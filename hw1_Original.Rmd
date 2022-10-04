@@ -1,0 +1,262 @@
+---
+<<<<<<< HEAD:hw1.Rmd
+title: "Homework 1"
+author: "Amina Mohammed (17301920), Joost Dijkstra ()"
+=======
+title: "hw1_Original.Rmd"
+author: "Amina Mohammed (17301920), "
+>>>>>>> 6a52820e49e41422ab009880086def4cc5fd6613:hw1_Original.Rmd
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    theme: readable
+    highlight: espresso
+    css: style.css
+    font-family: Palatino 
+    font-size: 16
+---
+
+```{r, echo = FALSE, include = FALSE, message = FALSE}
+source(here::here("Setup.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+<<<<<<< HEAD:hw1.Rmd
+A section called "Introduction" where you provide a short summary of the structure of your homework.
+
+In the following sections we, the group members, will both introduce ourselves and demonstrate our RMarkdown skills. The first section, called "Group Member", contains a picture of every group member, our hobbies, our favorite quote, and a table. This section is also complemented with emoji's and Giphy's. The second section contains our RMarkdown syntax. We demonstrate a chunk option, simulating random samples, an histogram, equations, purple text, a button, and a color box.    
+=======
+The structure section called "Introduction" where you provide a short summary of the structure of your homework. 
+>>>>>>> 6a52820e49e41422ab009880086def4cc5fd6613:hw1_Original.Rmd
+
+Moreover, record a short video to introduce your group and include it in your RMarkdown document.
+
+<video width="640" height="480" controls>
+  <source src="nameofthevideo.mp4" type="video/mp4">
+</video>
+
+
+<br>
+
+# Group Member
+
+**Amina** 
+
+<img src="AvatarAmina.JPEG" align="left" alt="Amina" style="width:150px;height:200px;"> 
+
+<p> Hello ! I'm Amina Mohammed, I'm following my last semester of course before writing my thesis. I'm super excited to follow this class and i expect to learn a bunch of new tools in order to develop new skills. &#128516;</p> 
+<br>
+<p> Apart from my student life, I love to express my creativity through poterry. I love the process of creating a  beautiful, sculptural and functional pieces with my own hands. I will give an extra point to this activity for the feeling of accomplishment; it feels incredible. &#128525;&#128151;<p>
+
+</p> If i had to choose emoji to describe myself I would certainly be: &#9749;&#128218; &#128049; &#127857; &#127856; &#127871;</p>
+
+<br>
+
+My fav quote would be :
+
+<figure>
+    <blockquote
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+    </blockquote>
+    <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+</figure>
+
+
+<br>
+<br>
+
+You can find in the table bellow the list of all my classes this semester
+```{r echo = FALSE, include = FALSE, message = FALSE}
+
+ScheduleAmina <- data.frame(Classes=c("Supply Chain", "Programming tools in DS", "IMC","Project in DA","Production Control","Risk Analytics"),
+                  Schedule=c("Monday from 8h30 - 12h00", "Tuesday from 9h00 - 12h00", "Tuesday from 14h15 - 18h00", "Thurday from 8h30 - 12h00", "Thurday from 14h00 - 18h00 (7 first week)", "Thurday from 14h00 - 18h00 (7 last week)"))
+
+```
+
+```{r echo=FALSE}
+kable(head(ScheduleAmina), booktabs = TRUE) %>%
+  kable_styling(font_size = 16)
+```
+
+I don't have class on Wednesday and Friday, But i have some hectic days starting from 8am to 6pm.  
+
+<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="150" />
+
+<br>
+
+```{r echo=FALSE}
+#Ed
+
+```
+
+```{r echo=FALSE}
+#J
+```
+
+
+# RMarkdown Syntax
+
+**1.Show an example where the chunk option `cache = T` leads to a misleading answer.**
+
+Caching option can be really usefull however it can sometimes lead to missleading. Indeed, if a code is time consuming due to long computations or plots that are taking too long to generate, we can use knitr caching to improve performance. However, if codes are linked between eachother, when we modify one we have to observe that the code with chunk cache option are also update, otherwise, the code will always take into consideration the old cache that we "register".
+
+```{r echo=FALSE, cache=TRUE}
+
+```
+
+
+```{r echo=FALSE}
+
+```
+<br>
+
+**2. Simulate 1000 random samples from an exponential distribution with mean $\lambda = 1$ using the function `rexp()`. Store these 1000 values in a vector called `x`. Then, compute the empirical median, mean and variance of `x`. Are these results different from $log(2)/\lambda$, $1/\lambda$ and $1/\lambda^2$ (their respective theoretical values)? Is this result surprising? Justify your answer.**
+
+To do so, we have use `set.seed` and `rexp()`function. We have the following table: 
+```{r echo = FALSE, include = FALSE, message = FALSE}
+set.seed(2000)
+x <- rexp(1000, 1)
+
+#for x ; $\lambda = 1$
+median(x)
+mean(x)
+var(x)
+
+#for log(2)/x
+median(log(2)/x)
+mean(log(2)/x)
+var(log(2)/x)
+
+#for 1/x
+median(1/x)
+mean(1/x)
+var(1/x)
+
+#for 1/x^2
+median(1/x^2)
+mean(1/x^2)
+var(1/x^2)
+
+```
+
+```{r echo = FALSE, include = FALSE, message = FALSE}
+
+TableSummary <- data.frame(Empirical=c("Median", "Mean", "Variance"),
+                  x=c(median(x), mean(x), var(x)),
+                  y= c(median(log(2)/x), mean(log(2)/x), var(log(2)/x)),
+                  z= c(median(1/x^2), mean(1/x^2), var(1/x^2)))
+
+colnames(TableSummary) <- c("Empirical values with lambda = 1", "x", "log(2)/x", "1/x^2")
+
+```
+
+```{r echo=FALSE}
+kable(head(TableSummary), booktabs = TRUE) %>%
+  kable_styling(font_size = 16)
+```
+
+<br>
+
+**3. Repeat the same experiment with $\lambda = 5$, display the code in the HTML file and discuss the results.**
+
+```{r echo = FALSE, include = FALSE, message = FALSE}
+y <- rexp(1000, 5)
+
+#for x ; $\lambda = 5$
+median(y)
+mean(y)
+var(y)
+```
+
+```{r echo = FALSE, include = FALSE, message = FALSE}
+
+TableLambda5 <- data.frame(Empirical=c("Median", "Mean", "Variance"),
+                  x=c(median(y), mean(y), var(y)))
+
+colnames(TableLambda5) <- c("Empirical values with lambda = 5", "x")
+
+```
+
+```{r echo=FALSE}
+kable(head(TableLambda5), booktabs = TRUE) %>%
+  kable_styling(font_size = 16)
+```
+
+<br>
+
+**4. Include a graph showing the histogram of `x` (make sure to include a caption to this figure). What happens if you increase the number of bins to 200?**
+
+<br>
+
+**5. Include the following equation: ![eq](hw1_eq2.png)**
+
+<br>
+
+**6. Include the following in-line equation: <img src="hw1_eq1.png" alt="eq2" style="display: inline-block; margin: 0" width="300px" />**
+
+<br>
+
+**7. Include the following text in purple: "It is change, continuing change, inevitable change, that is the dominant factor in society today. No sensible decision can be made any longer without....", Isaac Asimov.**
+
+<span style="color: purple;">"It is change, continuing change, inevitable change, that is the dominant factor in society today. No sensible decision can be made any longer without....", Isaac Asimov. </span>
+
+<br>
+
+**8. Include a "Click here" button with hide/unhide functionality.**
+```{r,  echo=FALSE}
+hide <- function(button_text = "Solution") {
+  paste0("\n<div class='webex-solution'><button>", button_text, "</button>\n")
+}
+
+unhide <- function() {
+  paste0("\n</div>\n")
+}
+
+style_widgets <- function(default = "red", correct = "blue") {
+  paste0(
+    "\n<style>\n",
+    "    .webex-solveme { border-color: ", default,"; }\n",
+    "    .webex-solveme.webex-correct { border-color: ", correct,"; }\n",
+    "</style>\n\n"
+  )
+}
+```
+
+
+`r hide("Click here")`
+`r unhide()`
+
+<br>
+
+**9. Include a "color box"" with some text.**
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Title</title>
+    <style>
+      /* The . with the boxed represents that it is a class */
+      .boxed {
+        background: purple;
+        color: black;
+        border: 3px solid black;
+        margin: 0px auto;
+        width: 456px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxed">
+        Hello ! We're the group f
+  </body>
+</html>
+
+<br>
