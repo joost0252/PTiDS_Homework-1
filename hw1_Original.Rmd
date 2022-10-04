@@ -1,5 +1,5 @@
 ---
-title: "hw1.Rmd"
+title: "hw1_Original.Rmd"
 author: "Amina Mohammed (17301920), "
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
