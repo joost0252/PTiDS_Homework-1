@@ -3,12 +3,13 @@ title: "hw1.Rmd"
 author: "Amina Mohammed (17301920),Edward Tandia (17310806) "
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
-  html_document:
-    theme: readable
-    highlight: espresso
-    css: style.css
-    font-family: Palatino 
-    font-size: 16
+html_document:
+theme: readable
+highlight: espresso
+#css: style.css
+font-family: Palatino 
+font-size: 16
+code_folding: show 
 ---
 
 ```{r, echo = FALSE, include = FALSE, message = FALSE}
@@ -26,9 +27,9 @@ A section called "Introduction" where you provide a short summary of the structu
 Moreover, record a short video to introduce your group and include it in your RMarkdown document.
 
 
-<video width="640" height="480" controls>
-  <source src="nameofthevideo.mp4" type="video/mp4">
-</video>
+<!--<video width="640" height="480" controls>
+#<source src="nameofthevideo.mp4" type="video/mp4">
+#</video>-->
 
 
 <br>
@@ -80,9 +81,9 @@ I don't have class on Wednesday and Friday, But i have some hectic days starting
 
 <br>
 
-** Edward Tandia **
+**Edward Tandia**
 
-<img src="photo_ed.JPEG" align="left" alt="Edward" style="width:150px;height:200px;"> 
+<img src="photo_ed.jpg" align="left" alt="Edward" style="width:150px;height:200px;"> 
 
 <p> Hey there! I am Edward Tandia, currently pursuing a master degree in Business analytics. As my friend Amina, this is also my last "normal" semester before starting the master thesis. I'm looking forward to learning new skills and improve myself in programming with R. I am 100% motivated and I truly believe that this semester will be memorable. &#128516;</p> 
 <br>
@@ -133,6 +134,7 @@ Caching option can be really usefull however it can lead to sometimes missleadin
 
 ```{r,  echo=FALSE}
 set.seed(2000)
+lambda <- 1
 x <- rexp(1000, 1)
 
 #for x
@@ -145,19 +147,26 @@ var(x)
 Are these results different from $log(2)/\lambda$, $1/\lambda$ and $1/\lambda^2$ (their respective theoretical values)? Is this result surprising? Justify your answer.
 ```{r,  echo=FALSE}
 #for log(2)/x
-median(log(2)/x)
-mean(log(2)/x)
-var(log(2)/x)
+#median(log(2)/x)
+#mean(log(2)/x)
+#var(log(2)/x)
 
 #for 1/x
-median(1/x)
-mean(1/x)
-var(1/x)
+#median(1/x)
+#mean(1/x)
+#var(1/x)
 
 #for 1/x^2
-median(1/x^2)
-mean(1/x^2)
-var(1/x^2)
+#median(1/x^2)
+#mean(1/x^2)
+#var(1/x^2)
+
+log(2)/lambda
+1/lambda
+1/lambda^2
+
+#results are very close to empirical ones. 
+  
 
 ```
 
@@ -165,16 +174,22 @@ var(1/x^2)
 
 **3. Repeat the same experiment with $\lambda = 5$, display the code in the HTML file and discuss the results.**
 
-```{r echo=FALSE}
+```{r echo=TRUE}
 set.seed(2000)
+lambda_y <-5
 y <- rexp(1000, 5)
-hist(y,xlab='Values',main = 'Exp distribution with lambda = 5')
+log(2)/lambda
+1/lambda
+1/lambda^2
+
 ```
 
 <br>
 
 **4. Include a graph showing the histogram of `x` (make sure to include a caption to this figure). What happens if you increase the number of bins to 200?**
-
+```{r echo = TRUE}
+hist(y,xlab='Values',main = 'Exp distribution with lambda = 5')
+```
 <br>
 
 **5. Include the following equation: ![eq](hw1_eq2.png)**
