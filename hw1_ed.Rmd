@@ -1,14 +1,15 @@
 ---
 title: "Homework 1"
-author: "Amina Mohammed (17301920), Joost Dijkstra ()"
+author: "Amina Mohammed (17301920), Joost Dijkstra (),Edward Tandia (17310806)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
-  html_document:
-    theme: readable
-    highlight: espresso
-    css: style.css
-    font-family: Palatino 
-    font-size: 16
+html_document:
+theme: readable
+highlight: espresso
+#css: style.css
+font-family: Palatino 
+font-size: 16
+code_folding: show 
 ---
 
 ```{r, echo = FALSE, include = FALSE, message = FALSE}
@@ -27,9 +28,10 @@ In the following sections we, the group members, will both introduce ourselves a
 
 Moreover, record a short video to introduce your group and include it in your RMarkdown document.
 
-<video width="640" height="480" controls>
-  <source src="nameofthevideo.mp4" type="video/mp4">
-</video>
+
+<!--<video width="640" height="480" controls>
+#<source src="nameofthevideo.mp4" type="video/mp4">
+#</video>-->
 
 
 <br>
@@ -66,6 +68,7 @@ You can find in the table bellow the list of all my classes this semester
 
 ScheduleAmina <- data.frame(Classes=c("Supply Chain", "Programming tools in DS", "IMC","Project in DA","Production Control","Risk Analytics"),
                   Schedule=c("Monday from 8h30 - 12h00", "Tuesday from 9h00 - 12h00", "Tuesday from 14h15 - 18h00", "Thurday from 8h30 - 12h00", "Thurday from 14h00 - 18h00 (7 first week)", "Thurday from 14h00 - 18h00 (7 last week)"))
+print(ScheduleAmina) 
 
 ```
 
@@ -80,15 +83,37 @@ I don't have class on Wednesday and Friday, But i have some hectic days starting
 
 <br>
 
+**Edward Tandia**
+
+<img src="photo_ed.jpg" align="left" alt="Edward" style="width:150px;height:200px;"> 
+
+<p> Hey there! I am Edward Tandia, currently pursuing a master degree in Business analytics. As my friend Amina, this is also my last "normal" semester before starting the master thesis. I'm looking forward to learning new skills and improve myself in programming with R. I am 100% motivated and I truly believe that this semester will be memorable. &#128516;</p> 
+<br>
+<p> My Hobbies?? Well, I am quite an open mind actually. I love to discover new topics, do sport,improve myself regardless the subject. Basically, I always seek self-improvement. &#128525;&#128151;<p>
+
+My favortie quote is :
+
+<figure>
+    <blockquote
+        <p>Each problem has its own solution.</p>
+    </blockquote>
+    <figcaption>— my mum</cite></figcaption>
+</figure>
+</p> If i had to choose one emoji to represent myself, it would be this one: &#9749;&#128218; &#128049; &#127857; &#127856; &#127871;</p>
+
+
 ```{r echo=FALSE}
 #Ed
+schedule_ed <- data.frame(Classes=c("Supply Chain", "Programming tools in DS", "Text mining","Individual Behavior in Digital Environments","Project in DA"),
+                  Schedule=c("Monday from 8h30 - 12h00", "Tuesday from 9h00 - 12h00","Wednesday from 8h30 - 12h00",
+                             "Wednesday from 14h15 - 18h00","Thurday from 8h30 - 12h00"))
+print(schedule_ed) 
 
 ```
 
 ```{r echo=FALSE}
 #J
 ```
-
 
 # RMarkdown Syntax
 
@@ -115,6 +140,7 @@ print(x)
 
 ```{r,  echo=FALSE}
 set.seed(2000)
+lambda <- 1
 x <- rexp(1000, 1)
 
 #for x
@@ -127,19 +153,26 @@ var(x)
 Are these results different from $log(2)/\lambda$, $1/\lambda$ and $1/\lambda^2$ (their respective theoretical values)? Is this result surprising? Justify your answer.
 ```{r,  echo=FALSE}
 #for log(2)/x
-median(log(2)/x)
-mean(log(2)/x)
-var(log(2)/x)
+#median(log(2)/x)
+#mean(log(2)/x)
+#var(log(2)/x)
 
 #for 1/x
-median(1/x)
-mean(1/x)
-var(1/x)
+#median(1/x)
+#mean(1/x)
+#var(1/x)
 
 #for 1/x^2
-median(1/x^2)
-mean(1/x^2)
-var(1/x^2)
+#median(1/x^2)
+#mean(1/x^2)
+#var(1/x^2)
+
+log(2)/lambda
+1/lambda
+1/lambda^2
+
+#results are very close to empirical ones. 
+  
 
 ```
 
@@ -147,14 +180,22 @@ var(1/x^2)
 
 **3. Repeat the same experiment with $\lambda = 5$, display the code in the HTML file and discuss the results.**
 
-```{r echo=FALSE}
+```{r echo=TRUE}
+set.seed(2000)
+lambda_y <-5
+y <- rexp(1000, 5)
+log(2)/lambda_y
+1/lambda_y
+1/lambda_y^2
 
 ```
 
 <br>
 
 **4. Include a graph showing the histogram of `x` (make sure to include a caption to this figure). What happens if you increase the number of bins to 200?**
-
+```{r echo = TRUE}
+hist(y,xlab='Values',main = 'Exp distribution with lambda = 5')
+```
 <br>
 
 **5. Include the following equation: ![eq](hw1_eq2.png)**
@@ -175,7 +216,7 @@ var(1/x^2)
 
 **8. Include a "Click here" button with hide/unhide functionality.**
 ```{r,  echo=FALSE}
-hide <- function(button_text = "Solution") {
+hide <- function(button_text = "Solution") { #Click here instead ?
   paste0("\n<div class='webex-solution'><button>", button_text, "</button>\n")
 }
 
