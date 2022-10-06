@@ -178,9 +178,9 @@ log(2)/lambda
 set.seed(2000)
 lambda_y <-5
 y <- rexp(1000, 5)
-log(2)/lambda
-1/lambda
-1/lambda^2
+log(2)/lambda_y
+1/lambda_y
+1/lambda_y^2
 
 ```
 
