@@ -267,7 +267,9 @@ hide()
 ````{r echo= TRUE}
 #install.packages("webexercises")
 library("webexercises")
+````
 
+````{r echo= TRUE}
 hide(button_text = "Hello")
 unhide()
 ````
