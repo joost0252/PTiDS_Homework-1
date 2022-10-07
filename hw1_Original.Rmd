@@ -22,17 +22,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-<<<<<<< HEAD:hw1.Rmd
-A section called "Introduction" where you provide a short summary of the structure of your homework.
-
 In the following sections we, the group members, will both introduce ourselves and demonstrate our RMarkdown skills. The first section, called "Group Member", contains a picture of every group member, our hobbies, our favorite quote, and a table. This section is also complemented with emoji's and Giphy's. The second section contains our RMarkdown syntax. We demonstrate a chunk option, simulating random samples, an histogram, equations, purple text, a button, and a color box.    
-=======
-The structure section called "Introduction" where you provide a short summary of the structure of your homework. 
->>>>>>> 6a52820e49e41422ab009880086def4cc5fd6613:hw1_Original.Rmd
 
 Moreover, record a short video to introduce your group and include it in your RMarkdown document.
 
-<<!--<video width="640" height="480" controls>
+<!--<video width="640" height="480" controls>
 #<source src="nameofthevideo.mp4" type="video/mp4">
 #</video>--> 
 
