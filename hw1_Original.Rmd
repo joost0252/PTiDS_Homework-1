@@ -103,14 +103,16 @@ My favortie quote is :
 </p> If i had to choose one emoji to represent myself, it would be this one: &#9749;&#128218; &#128049; &#127857; &#127856; &#127871;</p>
 
 
-```{r echo=FALSE}
+```{r echo = FALSE, include = FALSE, message = FALSE}
 #Ed
 schedule_ed <- data.frame(Classes=c("Supply Chain", "Programming tools in DS", "Text mining","Individual Behavior in Digital Environments","Project in DA"),
-                  Schedule=c("Monday from 8h30 - 12h00", "Tuesday from 9h00 - 12h00","Wednesday from 8h30 - 12h00",
-                             "Wednesday from 14h15 - 18h00","Thurday from 8h30 - 12h00"))
-print(schedule_ed) 
+                Schedule=c("Monday from 8h30 - 12h00", "Tuesday from 9h00 - 12h00","Wednesday from 8h30 - 12h00", "Wednesday from 14h15 - 18h00","Thurday from 8h30 - 12h00"))
 ```
 
+```{r echo=FALSE}
+kable(head(schedule_ed), booktabs = TRUE) %>%
+  kable_styling(font_size = 16)
+```
 
 ```{r echo=FALSE}
 #J
@@ -140,33 +142,31 @@ To do so, we have use `set.seed` and `rexp()`function. We have the following tab
 set.seed(2000)
 x <- rexp(1000, 1)
 
-#for x ; $\lambda = 1$
+#for x 
 median(x)
 mean(x)
 var(x)
 
-#for log(2)/x
-median(log(2)/x)
-mean(log(2)/x)
-var(log(2)/x)
+# their respective theoretical values
+lambda <-  1
 
-#for 1/x
-median(1/x)
-mean(1/x)
-var(1/x)
+#for log(2)/lambda
+log(2)/lambda
 
-#for 1/x^2
-median(1/x^2)
-mean(1/x^2)
-var(1/x^2)
+#for 1/lambda
+1/lambda
+
+#for 1/lambda^2
+1/lambda^2
 
 ```
 
 ```{r echo = FALSE, include = FALSE, message = FALSE}
+#REDO THE TABLE ACCORDING TO THE NEW VALUE:
 
 TableSummary <- data.frame(Empirical=c("Median", "Mean", "Variance"),
                   x=c(median(x), mean(x), var(x)),
-                  y= c(median(log(2)/x), mean(log(2)/x), var(log(2)/x)),
+                  y= c(log(2)/lambda, mean(log(2)/x), var(log(2)/x)),
                   z= c(median(1/x^2), mean(1/x^2), var(1/x^2)))
 
 colnames(TableSummary) <- c("Empirical values with lambda = 1", "x", "log(2)/x", "1/x^2")
@@ -186,9 +186,22 @@ kable(head(TableSummary), booktabs = TRUE) %>%
 y <- rexp(1000, 5)
 
 #for x ; $\lambda = 5$
+
 median(y)
 mean(y)
 var(y)
+
+# their respective theoretical values
+lambda2 <-  5
+
+#for log(2)/lambda
+log(2)/lambda2
+
+#for 1/lambda
+1/lambda2
+
+#for 1/lambda^2
+1/lambda2^2
 ```
 
 ```{r echo = FALSE, include = FALSE, message = FALSE}
@@ -205,6 +218,10 @@ kable(head(TableLambda5), booktabs = TRUE) %>%
   kable_styling(font_size = 16)
 ```
 
+WE have an exponential distribution 
+We get close results :
+
+
 <br>
 
 **4. Include a graph showing the histogram of `x` (make sure to include a caption to this figure). What happens if you increase the number of bins to 200?**
@@ -214,10 +231,16 @@ hist(y,xlab='Values',main = 'Exp distribution with lambda = 5')
 <br>
 
 **5. Include the following equation: ![eq](hw1_eq2.png)**
+$$f(x;p,q) = 
+\frac{ \Gamma(p+q)}{\Gamma(p)\Gamma(q)}
+x^{p-1}(1-x)^{q-1}, 0 < x < 1$$
+
 
 <br>
 
 **6. Include the following in-line equation: <img src="hw1_eq1.png" alt="eq2" style="display: inline-block; margin: 0" width="300px" />**
+$$Gamma(\int)}{\Gamma(p)\Gamma(q)}
+x^{p-1}(1-x)^{q-1}, 0 < x < 1$$
 
 <br>
 
