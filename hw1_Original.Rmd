@@ -239,8 +239,10 @@ x^{p-1}(1-x)^{q-1}, 0 < x < 1$$
 <br>
 
 **6. Include the following in-line equation: <img src="hw1_eq1.png" alt="eq2" style="display: inline-block; margin: 0" width="300px" />**
-$$Gamma(\int)}{\Gamma(p)\Gamma(q)}
-x^{p-1}(1-x)^{q-1}, 0 < x < 1$$
+
+In line we have : $\mathbb{P}\{t \in [0, T]: X(t) > u \  as \ u \to \infty \}$
+
+
 
 <br>
 
