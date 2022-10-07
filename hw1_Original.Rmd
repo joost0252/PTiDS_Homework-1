@@ -252,28 +252,26 @@ In line we have : $\mathbb{P}\{t \in [0, T]: X(t) > u \  as \ u \to \infty \}$
 <br>
 
 **8. Include a "Click here" button with hide/unhide functionality.**
-```{r,  echo=FALSE}
-hide <- function(button_text = "Solution") {
+
+
+<!-- hide <- function(button_text = "Sol") {
   paste0("\n<div class='webex-solution'><button>", button_text, "</button>\n")
 }
 
-unhide <- function(button_text = "Solution") {
-  paste0("\n<div class='webex-solution'>")
+unhide <- function() {
+  paste0("\n</div>\n")
 }
 
-style_widgets <- function(default = "red", correct = "blue") {
-  paste0(
-    "\n<style>\n",
-    "    .webex-solveme { border-color: ", default,"; }\n",
-    "    .webex-solveme.webex-correct { border-color: ", correct,"; }\n",
-    "</style>\n\n"
-  )
-}
-```
+hide()
+-->
+````{r echo= TRUE}
+#install.packages("webexercises")
+library("webexercises")
 
+hide(button_text = "Hello")
+unhide()
+````
 
-`r hide("Click here")`
-`r unhide("Hello")`
 
 <br>
 
