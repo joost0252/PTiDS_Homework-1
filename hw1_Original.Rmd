@@ -243,7 +243,6 @@ x^{p-1}(1-x)^{q-1}, 0 < x < 1$$
 In line we have : $\mathbb{P}\{t \in [0, T]: X(t) > u \  as \ u \to \infty \}$
 
 
-
 <br>
 
 **7. Include the following text in purple: "It is change, continuing change, inevitable change, that is the dominant factor in society today. No sensible decision can be made any longer without....", Isaac Asimov.**
@@ -258,8 +257,8 @@ hide <- function(button_text = "Solution") {
   paste0("\n<div class='webex-solution'><button>", button_text, "</button>\n")
 }
 
-unhide <- function() {
-  paste0("\n</div>\n")
+unhide <- function(button_text = "Solution") {
+  paste0("\n<div class='webex-solution'>")
 }
 
 style_widgets <- function(default = "red", correct = "blue") {
@@ -274,7 +273,7 @@ style_widgets <- function(default = "red", correct = "blue") {
 
 
 `r hide("Click here")`
-`r unhide()`
+`r unhide("Hello")`
 
 <br>
 
