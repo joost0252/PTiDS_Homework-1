@@ -230,6 +230,15 @@ hist(y,xlab='Values',main = 'Exp distribution with lambda = 5')
 ````
 <br>
 
+````{r echo= TRUE}
+hist(y,breaks= 200, xlab='Values',main = 'Exp distribution with lambda = 5')
+````
+We notice that the histogram with bins equal to 200, is more accurate. It shows some volatility between values 0 - 0.4 and gaps between values 1-1.2. The overall trend is still right queued and downward. 
+
+
+
+
+
 **5. Include the following equation: ![eq](hw1_eq2.png)**
 $$f(x;p,q) = 
 \frac{ \Gamma(p+q)}{\Gamma(p)\Gamma(q)}
@@ -265,7 +274,7 @@ unhide <- function() {
 hide()
 -->
 ````{r echo= TRUE}
-#install.packages("webexercises")
+install.packages("webexercises")
 library("webexercises")
 
 hide(button_text = "Hello")
