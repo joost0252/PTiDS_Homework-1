@@ -100,7 +100,7 @@ My favortie quote is :
     </blockquote>
     <figcaption>— my mum</cite></figcaption>
 </figure>
-</p> If i had to choose one emoji to represent myself, it would be this one: &#9749;&#128218; &#128049; &#127857; &#127856; &#127871;</p>
+</p> If i had to choose one emoji to represent myself, it would be this one: &#128520;</p>
 
 
 ```{r echo = FALSE, include = FALSE, message = FALSE}
@@ -114,11 +114,41 @@ kable(head(schedule_ed), booktabs = TRUE) %>%
   kable_styling(font_size = 16)
 ```
 
+**Joost Dijkstra**
+
+<img src="AvatarJoost.jpg" align="left" alt="Joost" style="width:150px;height:200px;"> 
+
+<p> Salut! My name is Joost Dijkstra and coming from the Netherlands. I am doing my QTEM exchange here, which stands for Qualitative Techniques for Economics and Management. This program gave me a lot of freedom to pursue my interests in the quantitative field. Giving me the opportunity to follow this course. </p> 
+<br>
+<p> Next to my academic life, I of course have hobbies. Although I have many, I think the one I am looking out for the most is skiing, as the season is almost starting. I love how it can be both strenuous and relaxing at the same time.&#9975;&#127935;<p>
+
+My favortie quote is :
+
+<figure>
+    <blockquote
+        <p>Have you ever had a dream that you, um, you had, your, you- you could, you’ll do, you- you wants, you, you could do so, you- you’ll do, you could- you, you want, you want them to do you so much you could do anything?</p>
+    </blockquote>
+    <figcaption>— Stuttering meme kid</cite></figcaption>
+</figure>
+
+<img src="https://tenor.com/view/kid-stuttering-meme-have-you-ever-had-dreams-you-do-so-much-you-could-do-everything-gif-16991242.gif" alt="Stuttering kid meme"  width="150" />
+
+</p> Some emoji's that would describe me are: &#127774;&#127867;&#127953;&#128692;</p>
+
 ```{r echo=FALSE}
-#J
+#Joost
+ScheduleJoost <- data.frame(Time=c("08:30 - 12:00", "12:30 - 14:00", "14:15 - 18:00"),
+                  Monday=c(" ", " ","Data Mining & Machine Learning"),
+                  Tuesday=c("Programming Tools in Data Science", " "," "),
+                  Wednesday=c("Text Mining", " "," "),
+                  Thursday=c(" ", "French Class"," "),
+                  Friday=c(" ", " ","Optimization Methods in Management Science"))
 ```
 
-
+```{r echo=FALSE}
+kable(head(ScheduleJoost), booktabs = TRUE, align = "cccccc") %>%
+  kable_styling(font_size = 16, full_width = T)
+```
 # RMarkdown Syntax
 
 **1.Show an example where the chunk option `cache = T` leads to a misleading answer.**
@@ -273,12 +303,13 @@ unhide <- function() {
 
 hide()
 -->
-````{r echo= TRUE}
-install.packages("webexercises")
-library("webexercises")
+````{r echo= FALSE}
+#hide(button_text = "Hello World!")
+#unhide()
+# with shiny package 
+#actionButton("button", "Click here!")
+#observeEvent("Hello Wolrd!")
 
-hide(button_text = "Hello")
-unhide()
 ````
 
 
