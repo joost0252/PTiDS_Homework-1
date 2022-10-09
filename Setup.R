@@ -2,16 +2,17 @@
 ## The following loads the needed packages ##
 #############################################
 #install packages
-install <- c('webexercises','shiny')
+#install <- c('webexercises','shiny') # to get buttons
+#install.packages("shiny")
 # load the required packages
 packages <- c(
   "knitr", "readr", "dplyr",
   "here", # for the project's organization
   "tidyverse", "kableExtra", #Cleaning and exploring,
-  'webexercises','shiny'
+  "webexercises","shiny","ggplot2"
 )
 
-purrr::walk(install.packages(install),packages, library, character.only = TRUE)
+purrr::walk(packages, library, character.only = TRUE)
 
 ######################################################
 ## The following sets a few option for nice reports ##
