@@ -5,12 +5,14 @@
 #install <- c('webexercises','shiny') # to get buttons
 #install.packages("shiny")
 # load the required packages
+#install.packages("imager")
+#install.packages("ffmpeg")
 
 packages <- c(
   "knitr", "readr", "dplyr",
   "here", # for the project's organization
   "tidyverse", "kableExtra", #Cleaning and exploring,
-  "webexercises","ggplot2", "shiny", "devtools"
+  "webexercises","ggplot2", "shiny", "devtools","imager"
 )
 
 purrr::walk(packages, library, character.only = TRUE)

@@ -26,10 +26,13 @@ The stucture of our homework will be the following:
 - **Group member presentation**
 - **Rmarkdown exercices**
 
-<video width="640" height="480" controls>
-<source src="PresentationofGroupMembers.mp4" type="video/mp4">
-</video> 
+<!--<video width="640" height="480" controls>
+#<source src="PresentationofGroupMembers.mp4" type="video/mp4">
+</video>--> 
 
+<video>
+    <source src="https://drive.google.com/uc?export=download&id=videoID" type='video/mp4'>
+</video>
 
 <br>
 
@@ -149,14 +152,21 @@ kable(head(ScheduleJoost), booktabs = TRUE, align = "cccccc") %>%
 
 Caching option can be really usefull however it can sometimes lead to missleading. Indeed, if a code is time consuming due to long computations or plots that are taking too long to generate, we can use knitr caching to improve performance. However, if codes are linked between eachother, when we modify one we have to observe that the code with chunk cache option are also update, otherwise, the code will always take into consideration the old cache that we "register".
 
-```{r echo=FALSE, cache=TRUE}
-
+```{r echo=TRUE, cache=TRUE}
+x <- sample(1:100, 100)
+print(x)
 ```
 
 
-```{r echo=FALSE}
-
+```{r,echo=TRUE,cache = FALSE}
+(e<-2*x)
 ```
+
+
+```{r,echo = TRUE,cache = TRUE}
+(d <- 2*x)
+```
+
 <br>
 
 **2. Simulate 1000 random samples from an exponential distribution with mean $\lambda = 1$ using the function `rexp()`. Store these 1000 values in a vector called `x`. Then, compute the empirical median, mean and variance of `x`. Are these results different from $log(2)/\lambda$, $1/\lambda$ and $1/\lambda^2$ (their respective theoretical values)? Is this result surprising? Justify your answer.**
@@ -285,26 +295,17 @@ In line we have : $\mathbb{P}\{t \in [0, T]: X(t) > u \  as \ u \to \infty \}$
 <br>
 
 **8. Include a "Click here" button with hide/unhide functionality.**
+```{r include = F}
+world <- c("Hello world !")
+```
 
-
-<!-- hide <- function(button_text = "Sol") {
-  paste0("\n<div class='webex-solution'><button>", button_text, "</button>\n")
-}
-
-unhide <- function() {
-  paste0("\n</div>\n")
-}
-
-hide()
--->
-````{r echo= FALSE}
-#hide(button_text = "Hello World!")
-#unhide()
-# with shiny package 
-#actionButton("button", "Click here!")
-#observeEvent("Hello Wolrd!")
-````
-
+```{r incldue = F}
+hide1 <-hide(button_text = 'Click here!') 
+unhide1<- unhide()
+```
+`r hide1 `
+**hello world!**
+`r unhide1 `
 
 
 <br>
