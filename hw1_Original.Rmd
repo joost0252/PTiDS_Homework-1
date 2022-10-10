@@ -309,6 +309,31 @@ No matter we do, the bouton doesn't work properly. It doesn't display any answe.
 
 <br>
 
+#button shiny
+```{r button3, echo = FALSE, cache = FALSE}
+library(shiny)
+library(shinyjs)
+shinyApp(
+  ui = fluidPage(
+    useShinyjs(),
+    actionButton("hide", "Hide/Unhide"),
+    textOutput("text"),
+    echo = FALSE
+  ),
+  server = function(input, output, session) {
+    output$text <- renderText({
+      "click the button again to hide this text"
+    })
+    toggle('text')
+
+    observeEvent(input$hide, {
+      toggle("text") # if you want to alternate between hiding and showing
+    })
+  },
+  options = list(height = 700)
+)
+``` 
+
 **9. Include a "color box"" with some text.**
 
 <html lang="en">
