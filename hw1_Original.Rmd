@@ -9,7 +9,7 @@ output:
     #css: style.css
     font-family: Palatino 
     font-size: 16
-    code_folding: show 
+    code_folding: show
 ---
 
 ```{r, echo = FALSE, include = FALSE, message = FALSE}
@@ -28,9 +28,7 @@ The stucture of our homework will be the following:
 - **Rmarkdown exercices**<br>
 
 
-<video width="640" height="480" controls>
-#<source src="https://unils-my.sharepoint.com/personal/edward_tandia_unil_ch/_layouts/15/stream.aspx?id=%2Fpersonal%2Fedward%5Ftandia%5Funil%5Fch%2FDocuments%2FPièces%20jointes%2Ffinal%5Fvideo%2Emp4&ga=1" type="video/mp4">
-</video> 
+<iframe src="https://player.vimeo.com/video/758851438?h=7e57b6be9f" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 <br>
 
@@ -296,27 +294,14 @@ In line we have : $\mathbb{P}\{t \in [0, T]: X(t) > u \  as \ u \to \infty \}$
 <br>
 
 **8. Include a "Click here" button with hide/unhide functionality.**
-
-<details><summary>Click here! </summary
-<b>We wish to use the function hide/unhide however it doesn't in an appropriate way
-`r hide('Click here!') `
-`r unhide() `
-
-No matter we do, the bouton doesn't work properly. It doesn't display any answe.
-</b>
-</details>
-
-
-<br>
-
-#button shiny
 ```{r button3, echo = FALSE, cache = FALSE}
+
 library(shiny)
 library(shinyjs)
 shinyApp(
   ui = fluidPage(
     useShinyjs(),
-    actionButton("hide", "Hide/Unhide"),
+    actionButton("hide", "Click here"),
     textOutput("text"),
     echo = FALSE
   ),
