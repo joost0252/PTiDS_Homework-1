@@ -88,6 +88,9 @@ I don't have class on Wednesday and Friday, But i have some hectic days starting
 <p> Hey there! I am Edward Tandia, currently pursuing a master degree in Business analytics. As my friend Amina, this is also my last "normal" semester before starting the master thesis. I'm looking forward to learning new skills and improve myself in programming with R. I am 100% motivated and I truly believe that this semester will be memorable. &#128516;</p> 
 <br>
 <p> My Hobbies?? Well, I am quite an open mind actually. I love to discover new topics, do sport,improve myself regardless the subject. Basically, I always seek self-improvement. &#128525;&#128151;<p>
+\n 
+\n 
+<img src="https://media.tenor.com/Cyr2PR6E3kkAAAAC/sacha-baron.gif" alt="SUCCESS" width="150"/>
 
 My favortie quote is :
 
@@ -304,7 +307,7 @@ hide1 <-hide(button_text = 'Click here!')
 unhide1<- unhide()
 ```
 `r hide1 `
-**hello world!**
+comment here !! 
 `r unhide1 `
 
 
