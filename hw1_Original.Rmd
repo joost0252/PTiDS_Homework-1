@@ -22,17 +22,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 The stucture of our homework will be the following:
-- **Introduction Vidéo**
-- **Group member presentation**
-- **Rmarkdown exercices**
+<br>
+- **Introduction Vidéo** <br>
+- **Group member presentation** <br>
+- **Rmarkdown exercices**<br>
 
-<!--<video width="640" height="480" controls>
-#<source src="PresentationofGroupMembers.mp4" type="video/mp4">
-</video>--> 
 
-<video>
-    <source src="https://drive.google.com/uc?export=download&id=videoID" type='video/mp4'>
-</video>
+<video width="640" height="480" controls>
+#<source src="https://unils-my.sharepoint.com/personal/edward_tandia_unil_ch/_layouts/15/stream.aspx?id=%2Fpersonal%2Fedward%5Ftandia%5Funil%5Fch%2FDocuments%2FPièces%20jointes%2Ffinal%5Fvideo%2Emp4&ga=1" type="video/mp4">
+</video> 
 
 <br>
 
@@ -80,9 +78,10 @@ I don't have class on Wednesday and Friday, But i have some hectic days starting
 <img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="150" />
 
 <br>
+
 **Edward Tandia**
 
-<img src="photo_ed.jpg" align="left" alt="Edward" style="width:150px;height:200px;"> 
+<img src="AvatarEdward.jpg" align="left" alt="Edward" style="width:150px;height:200px;"> 
 
 <p> Hey there! I am Edward Tandia, currently pursuing a master degree in Business analytics. As my friend Amina, this is also my last "normal" semester before starting the master thesis. I'm looking forward to learning new skills and improve myself in programming with R. I am 100% motivated and I truly believe that this semester will be memorable. &#128516;</p> 
 <br>

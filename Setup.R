@@ -12,7 +12,8 @@ packages <- c(
   "knitr", "readr", "dplyr",
   "here", # for the project's organization
   "tidyverse", "kableExtra", #Cleaning and exploring,
-  "webexercises","ggplot2", "shiny", "devtools","imager"
+  "webexercises","ggplot2", "shiny", "devtools"
+  #,"imager"
 )
 
 purrr::walk(packages, library, character.only = TRUE)
