@@ -5,11 +5,12 @@
 #install <- c('webexercises','shiny') # to get buttons
 #install.packages("shiny")
 # load the required packages
+
 packages <- c(
   "knitr", "readr", "dplyr",
   "here", # for the project's organization
   "tidyverse", "kableExtra", #Cleaning and exploring,
-  "webexercises","shiny","ggplot2"
+  "webexercises","ggplot2", "shiny", "devtools"
 )
 
 purrr::walk(packages, library, character.only = TRUE)
